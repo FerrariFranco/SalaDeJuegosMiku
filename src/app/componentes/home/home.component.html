@@ -1,0 +1,26 @@
+<!-- home.component.html -->
+<div class="header">
+  <div class="header-content">
+    <div *ngIf="isLoggedIn; else loggedOut">
+      <img *ngIf="userPhotoURL" [src]="userPhotoURL" alt="Foto de perfil" class="profile-pic">
+      <span class="user-email">{{ userEmail }}</span>
+      <button class="small-button" (click)="logout()">Cerrar Sesión</button>
+    </div>
+
+    <ng-template #loggedOut>
+      <button class="small-button" (click)="goToLogin()">Ir a Login</button>
+      <button class="small-button" (click)="goToRegistro()">Registrarse</button>
+    </ng-template>
+    <h2>Sala de Juegos Miku!!</h2>
+  </div>
+</div>
+
+<div class="home-container">
+  <div class="game-buttons">
+    <button (click)="goToJuego1()">Juego 1</button>
+    <button (click)="goToJuego2()">Juego 2</button>
+    <button (click)="goToJuego3()">Juego 3</button>
+    <button (click)="goToJuego4()">Juego 4</button>
+  </div>
+  <button class="small-button" (click)="goToQuien()">Ir a ¿Quién Soy?</button>
+</div>

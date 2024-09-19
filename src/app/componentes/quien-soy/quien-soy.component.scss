@@ -1,0 +1,48 @@
+.sobre-mi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100vh; /* Para que cubra toda la pantalla */
+    background-image: url('../../../assets/bg-quien.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Asegúrate de que el texto sea visible sobre el fondo */
+  }
+  
+  .info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .datos-personales {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .imagen img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .explicacion-juego {
+    max-width: 600px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  

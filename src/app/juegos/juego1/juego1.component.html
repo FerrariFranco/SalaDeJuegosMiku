@@ -1,0 +1,40 @@
+<!-- juego1.component.html -->
+<div class="keyboard">
+    <div class="row">
+      <button *ngFor="let key of row1" (click)="onKeyPress(key)">{{ key }}</button>
+    </div>
+    <div class="row">
+      <button *ngFor="let key of row2" (click)="onKeyPress(key)">{{ key }}</button>
+    </div>
+    <div class="row">
+      <button *ngFor="let key of row3" (click)="onKeyPress(key)">{{ key }}</button>
+    </div>
+    <div class="row">
+      <button *ngFor="let key of row4" (click)="onKeyPress(key)">{{ key }}</button>
+    </div>
+  </div>
+  
+
+  <div class="display">
+    <p>{{ displayedText }}</p>
+  </div>
+  <div class='miku'>
+    <div class='head'>
+        <img src='assets/miku-head.png'>
+    </div>
+    <div class='body'>
+        <img src='/assets/miku-body.png'>
+    </div>
+    <div class='r-arm'>
+        <img src='/assets/miku-r-arm.png'>
+    </div>
+    <div class='l-arm'>
+        <img src='/assets/miku-l-arm.png'>
+    </div>
+    <div class='r-leg'>
+        <img src='/assets/miku-r-leg.png'>
+    </div>
+    <div class='l-leg'>
+        <img src='/assets/miku-l-leg.png'>
+    </div>
+</div>

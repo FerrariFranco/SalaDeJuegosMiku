@@ -1,0 +1,81 @@
+/* home.component.scss */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../../assets/bg-home.jpg'); 
+  background-size: cover;
+  color: rgb(255, 242, 218);
+  text-align: center;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.user-email {
+  margin-right: auto;
+}
+
+h2 {
+  margin: 0;
+}
+
+.small-button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small-button:hover {
+  background-color: #3700b3;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.game-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-buttons button:hover {
+  background-color: #3700b3;
+}
