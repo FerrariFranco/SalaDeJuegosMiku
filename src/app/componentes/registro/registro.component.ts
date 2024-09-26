@@ -12,7 +12,6 @@ import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
   styleUrls: ['./registro.component.scss']
 })
 export class RegistroComponent {
-  fullname = new FormControl('', [Validators.required]);
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required, Validators.pattern("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")]);
 
@@ -30,7 +29,7 @@ export class RegistroComponent {
   }
 
   async signup() {
-    if (this.fullname.valid && this.email.valid && this.password.valid && this.selectedAvatar !== -1) {
+    if (this.email.valid && this.password.valid && this.selectedAvatar !== -1) {
       try {
         const emailValue = this.email.value ?? '';
         const passwordValue = this.password.value ?? '';

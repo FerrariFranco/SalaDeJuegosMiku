@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('../../../assets/bg-login.jpg'); 
+  background-image: url('../../../assets/bg-login.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -13,11 +13,14 @@
 }
 
 form {
-  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   width: 100%;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del formulario */
 }
 
 h1 {
@@ -26,22 +29,23 @@ h1 {
 
 .form-group {
   margin-bottom: 20px;
+  width: 100%; /* Asegura que el contenedor del input ocupe todo el ancho */
+  text-align: left; /* Mantén el texto del label alineado a la izquierda */
 }
 
 label {
-  display: block;
   margin-bottom: 8px;
-  text-align: left;
   font-size: 1.2rem;
 }
 
 input {
-  width: 100%;
+  width: 100%; /* Ocupa el 100% del contenedor */
   padding: 10px;
   margin-bottom: 5px;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del input */
 }
 
 .avatar-selection {
@@ -70,27 +74,27 @@ input {
 }
 
 .avatar:nth-child(1) {
-  background-image: url('../../../assets/profiles/m1.png');
+  background-image: url('../../../assets/profiles/1.png');
 }
 
 .avatar:nth-child(2) {
-  background-image: url('../../../assets/profiles/m2.png');
+  background-image: url('../../../assets/profiles/2.png');
 }
 
 .avatar:nth-child(3) {
-  background-image: url('../../../assets/profiles/m3.png');
+  background-image: url('../../../assets/profiles/3.png');
 }
 
 .avatar:nth-child(4) {
-  background-image: url('../../../assets/profiles/m4.png');
+  background-image: url('../../../assets/profiles/4.png');
 }
 
 .avatar:nth-child(5) {
-  background-image: url('../../../assets/profiles/m5.png');
+  background-image: url('../../../assets/profiles/5.png');
 }
 
 .avatar:nth-child(6) {
-  background-image: url('../../../assets/profiles/m6.png');
+  background-image: url('../../../assets/profiles/6.png');
 }
 
 .avatar.selected {

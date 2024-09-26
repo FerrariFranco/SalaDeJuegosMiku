@@ -1,4 +1,3 @@
-<!-- home.component.html -->
 <div class="header">
   <div class="header-content">
     <div *ngIf="isLoggedIn; else loggedOut">
@@ -17,10 +16,11 @@
 
 <div class="home-container">
   <div class="game-buttons">
-    <button (click)="goToJuego1()">Juego 1</button>
-    <button (click)="goToJuego2()">Juego 2</button>
-    <button (click)="goToJuego3()">Juego 3</button>
-    <button (click)="goToJuego4()">Juego 4</button>
+    <button (click)="goToJuego1()" [disabled]="!isLoggedIn">Juego 1</button>
+    <button (click)="goToJuego2()" [disabled]="!isLoggedIn">Juego 2</button>
+    <button (click)="goToJuego3()" [disabled]="!isLoggedIn">Juego 3</button>
+    <button (click)="goToJuego4()" [disabled]="!isLoggedIn">Juego 4</button>
   </div>
   <button class="small-button" (click)="goToQuien()">Ir a ¿Quién Soy?</button>
+  <app-chat> </app-chat>
 </div>

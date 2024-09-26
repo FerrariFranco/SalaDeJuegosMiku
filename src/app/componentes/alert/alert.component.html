@@ -1,0 +1,6 @@
+<div *ngIf="isVisible" class="alert-overlay">
+  <div class="alert-box">
+    <p>{{ alertMessage }}</p>
+    <button (click)="closeAlert()">Aceptar</button>
+  </div>
+</div>

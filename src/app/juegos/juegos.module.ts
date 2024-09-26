@@ -7,13 +7,15 @@ import { Juego1Component } from './juego1/juego1.component';
 import { Juego2Component } from './juego2/juego2.component';
 import { Juego3Component } from './juego3/juego3.component';
 import { Juego4Component } from './juego4/juego4.component';
+import { AlertComponent } from '../componentes/alert/alert.component'; // Asegúrate de importarlo
 
 @NgModule({
   declarations: [
     Juego1Component,
     Juego2Component,
     Juego3Component,
-    Juego4Component
+    Juego4Component,
+    AlertComponent
   ],
   imports: [
     CommonModule,

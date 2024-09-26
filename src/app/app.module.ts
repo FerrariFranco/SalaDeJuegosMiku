@@ -13,11 +13,16 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AuthService } from './servicios/auth.service'; // Ajusta la ruta según tu estructura
+import { LoadingSpinnerComponent } from './componentes/loading-spinner/loading-spinner.component'; // Ajusta la ruta según tu estructura
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +35,7 @@ import { AuthService } from './servicios/auth.service'; // Ajusta la ruta según
   providers: [
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),AuthService
   ],

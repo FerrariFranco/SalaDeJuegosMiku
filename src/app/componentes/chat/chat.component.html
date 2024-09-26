@@ -1,0 +1,24 @@
+<div class="chat-container">
+  <!-- Recorremos todos los mensajes -->
+  <div *ngFor="let message of messages" class="message-container" 
+       [ngClass]="{'my-message': message.email === userEmail, 'other-message': message.email !== userEmail}">
+    
+    <!-- Si es el mensaje del usuario actual, no mostrar el email -->
+    <div *ngIf="message.email !== userEmail" class="message-header">
+      <img [src]="getAvatarURL()" class="avatar" alt="Avatar">
+      <span class="email">{{ message.email }}</span>
+    </div>
+
+    <!-- Contenido del mensaje -->
+    <div class="message-body">
+      <p>{{ message.text }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Input para enviar nuevo mensaje, bloqueado si no está logueado -->
+<div class="new-message">
+  <input [(ngModel)]="newMessage" placeholder="Escribe un mensaje..." 
+         [disabled]="!userEmail" /> <!-- Deshabilitar si no hay un usuario logueado -->
+  <button (click)="sendMessage()" [disabled]="!userEmail || !newMessage.trim()">Enviar</button> <!-- Deshabilitar si no está logueado o si el mensaje está vacío -->
+</div>

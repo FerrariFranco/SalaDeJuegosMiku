@@ -1,82 +1,61 @@
-/* juego1.component.scss */
-.keyboard {
+  /* Estilos generales */
+  :host {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+    background-image: url('/assets/ahorcado/ahorcado-bg.png');
+    background-size: cover;
+    background-position: center;
   }
-  
-  .row {
+
+  .fail-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.5rem;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .displayed-word {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: aqua;
+    letter-spacing: 15px;
+    text-align: center;
+  }
+
+  .keyboard {
     display: flex;
-    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; 
   }
-  
+
+  .row {
+    margin: 10px 0;
+  }
+
   button {
-    width: 40px;
-    height: 40px;
-    margin: 2px;
-    font-size: 16px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color: #0075ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
   }
-  
-  .display {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
+
+  button:disabled {
+    background-color: grey; /* Cambia el color de las letras usadas */
   }
-  .miku {
-    position: relative;
-    width: 200px; 
-    height: 400px; 
-    margin: auto;
-  }
-  
-  .miku img {
-    width: 100%;
-    display: block;
-  }
-  
-  .head {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-  }
-  
-  .body {
-    position: absolute;
-    top: 100px; /* Ajustado para que encaje bien con la cabeza */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-  }
-  
-  .r-arm, .l-arm {
-    position: absolute;
-    top: 120px; /* Ajustado para que coincida con los hombros del cuerpo */
-    width: 50px;
-  }
-  
-  .r-arm {
-    left: calc(50% + 80px); /* Ajustado para que coincida con el lado derecho del cuerpo */
-  }
-  
-  .l-arm {
-    left: calc(50% - 130px); /* Ajustado para que coincida con el lado izquierdo del cuerpo */
-  }
-  
-  .r-leg, .l-leg {
-    position: absolute;
-    top: 250px; /* Ajustado para que coincida con la parte inferior del cuerpo */
-    width: 50px;
-  }
-  
-  .r-leg {
-    left: calc(50% + 20px); /* Ajustado para que coincida con la pierna derecha */
-  }
-  
-  .l-leg {
-    left: calc(50% - 70px); /* Ajustado para que coincida con la pierna izquierda */
-  }
-  

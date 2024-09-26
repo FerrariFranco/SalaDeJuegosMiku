@@ -1,1 +1,26 @@
-<p>juego2 works!</p>
+<div class="juego-container">
+    <div class="mazo">
+      <div class="mazo-boca-arriba">
+        <h3>Carta Boca Arriba</h3>
+        <div class="carta" *ngIf="cartaActual">{{ cartaActual }}</div>
+      </div>
+      <div class="mazo-dado-vuelta">
+        <h3>Mazo</h3>
+        <div class="carta" *ngIf="cartas.length > 0">🂠</div>
+      </div>
+    </div>
+  
+    <div class="botones">
+      <button (click)="verificarEleccion('mayor')">Mayor</button>
+      <button (click)="verificarEleccion('menor')">Menor</button>
+    </div>
+  
+    <div class="resultado">
+      <p>{{ mensaje }}</p>
+      <p>Puntos: {{ puntos }}</p>
+    </div>
+  
+    <!-- Botón que redirige al Home -->
+    <button class="home" (click)="irAlHome()">Volver al Home</button>
+  </div>
+  

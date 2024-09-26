@@ -1,40 +1,42 @@
-<!-- juego1.component.html -->
-<div class="keyboard">
-    <div class="row">
-      <button *ngFor="let key of row1" (click)="onKeyPress(key)">{{ key }}</button>
-    </div>
-    <div class="row">
-      <button *ngFor="let key of row2" (click)="onKeyPress(key)">{{ key }}</button>
-    </div>
-    <div class="row">
-      <button *ngFor="let key of row3" (click)="onKeyPress(key)">{{ key }}</button>
-    </div>
-    <div class="row">
-      <button *ngFor="let key of row4" (click)="onKeyPress(key)">{{ key }}</button>
-    </div>
-  </div>
-  
 
-  <div class="display">
-    <p>{{ displayedText }}</p>
-  </div>
-  <div class='miku'>
-    <div class='head'>
-        <img src='assets/miku-head.png'>
-    </div>
-    <div class='body'>
-        <img src='/assets/miku-body.png'>
-    </div>
-    <div class='r-arm'>
-        <img src='/assets/miku-r-arm.png'>
-    </div>
-    <div class='l-arm'>
-        <img src='/assets/miku-l-arm.png'>
-    </div>
-    <div class='r-leg'>
-        <img src='/assets/miku-r-leg.png'>
-    </div>
-    <div class='l-leg'>
-        <img src='/assets/miku-l-leg.png'>
-    </div>
+<!-- Div que cambia el fondo según los fallos -->
+<div class="fail-indicator" [style.background-image]="getFailBackground()">
+  Fallos: {{ failCount }}
 </div>
+
+<!-- Mostrar la palabra con guiones bajos -->
+<div class="displayed-word">
+  <span *ngFor="let letter of displayedWord">
+    {{ letter }}
+  </span>
+</div>
+<app-alert></app-alert>
+
+<!-- Teclado para seleccionar letras -->
+<div class="keyboard">
+  <div class="row">
+    <button 
+      *ngFor="let key of row1" 
+      [disabled]="isLetterUsed(key)" 
+      (click)="onKeyPress(key)">
+      {{ key }}
+    </button>
+  </div>
+  <div class="row">
+    <button 
+      *ngFor="let key of row2" 
+      [disabled]="isLetterUsed(key)" 
+      (click)="onKeyPress(key)">
+      {{ key }}
+    </button>
+  </div>
+  <div class="row">
+    <button 
+      *ngFor="let key of row3" 
+      [disabled]="isLetterUsed(key)" 
+      (click)="onKeyPress(key)">
+      {{ key }}
+    </button>
+  </div>
+</div>
+<button (click)="goHome()" class="home-button">Volver al Home</button>
