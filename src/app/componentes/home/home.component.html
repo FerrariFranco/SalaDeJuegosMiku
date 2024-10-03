@@ -3,24 +3,50 @@
     <div *ngIf="isLoggedIn; else loggedOut">
       <img *ngIf="userPhotoURL" [src]="userPhotoURL" alt="Foto de perfil" class="profile-pic">
       <span class="user-email">{{ userEmail }}</span>
-      <button class="small-button" (click)="logout()">Cerrar Sesión</button>
+      <button class="small-button" (click)="logout()">
+        <img src="../../../assets/icons/logout.png" alt="Cerrar Sesión" class="button-icon">
+      </button>
     </div>
 
     <ng-template #loggedOut>
-      <button class="small-button" (click)="goToLogin()">Ir a Login</button>
-      <button class="small-button" (click)="goToRegistro()">Registrarse</button>
+      <button class="small-button" (click)="goToLogin()">
+        <img src="../../../assets/icons/login.png" alt="Iniciar Sesión" class="button-icon">
+      </button>
+      <button class="small-button" (click)="goToRegistro()">
+        <img src="../../../assets/icons/registro.png" alt="Registrarse" class="button-icon">
+      </button>
     </ng-template>
-    <h2>Sala de Juegos Miku!!</h2>
+
+    <h2 class="titulo-neon">Sala de Juegos Miku!!</h2>
+
+    <button class="small-button" (click)="goToQuien()">
+      ¿Quién Soy?
+    </button>
   </div>
 </div>
 
+
 <div class="home-container">
-  <div class="game-buttons">
-    <button (click)="goToJuego1()" [disabled]="!isLoggedIn">Juego 1</button>
-    <button (click)="goToJuego2()" [disabled]="!isLoggedIn">Juego 2</button>
-    <button (click)="goToJuego3()" [disabled]="!isLoggedIn">Juego 3</button>
-    <button (click)="goToJuego4()" [disabled]="!isLoggedIn">Juego 4</button>
+  <div class="game-section">
+    <h3 class="game-section-title">Juegos!</h3>
+    <div class="game-buttons-container">
+      <div class="game-buttons-row">
+        <button (click)="goToJuego1()" [disabled]="!isLoggedIn">
+          <img src="../../../assets/icons/ahorcado.png" alt="Juego 1" class="button-icon">
+        </button>
+        <button (click)="goToJuego2()" [disabled]="!isLoggedIn">
+          <img src="../../../assets/icons/mayormenor.png" alt="Juego 2" class="button-icon">
+        </button>
+      </div>
+      <div class="game-buttons-row">
+        <button (click)="goToJuego3()" [disabled]="!isLoggedIn">
+          <img src="../../../assets/icons/trivia.png" alt="Juego 3" class="button-icon">
+        </button>
+        <button (click)="goToJuego4()" [disabled]="!isLoggedIn">
+          <img src="../../../assets/icons/laberinto.png" alt="Juego 4" class="button-icon">
+        </button>
+      </div>
+    </div>
   </div>
-  <button class="small-button" (click)="goToQuien()">Ir a ¿Quién Soy?</button>
-  <app-chat> </app-chat>
+  <app-chat></app-chat>
 </div>

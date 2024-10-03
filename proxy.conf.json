@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "http://api.chartlyrics.com",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  

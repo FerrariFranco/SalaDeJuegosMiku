@@ -1,14 +1,13 @@
 .home-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100vh;
   background-image: url('../../../assets/bg-home.jpg');
   background-size: cover;
   color: rgb(255, 242, 218);
+  position: relative;
   text-align: center;
-  position: relative; /* Necesario para posicionar elementos absolutamente dentro del contenedor */
 }
 
 .header {
@@ -47,44 +46,97 @@ h2 {
 }
 
 .small-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 5px 10px;
   font-size: 0.8rem;
-  background-color: #6200ea;
+  background-color: rgba(0, 229, 229, 0.7); /* Celeste claro, un poco menos intenso */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.small-button:hover {
-  background-color: #3700b3;
+
+.small-button img.button-icon {
+  width: 29px;
+  height: 29px;
 }
 
-.game-buttons {
+.small-button:hover {
+  background-color: rgba(0, 229, 229, 0.9); /* Un poco más intenso para el hover */
+}
+
+
+.game-section {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  position: absolute;
+  bottom: 250px;
+  right: 20px;
+  z-index: 100;
+}
+
+.game-section-title {
+  color: #00e5e5; /* Celeste */
+  text-shadow: 
+    0 0 5px rgba(0, 229, 229, 0.8), 
+    0 0 10px rgba(0, 229, 229, 1),
+    0 0 20px rgba(0, 229, 229, 1),
+    0 0 30px rgba(0, 229, 229, 1);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.game-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-buttons-row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
-.game-buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #6200ea;
-  color: white;
+.game-buttons-row button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 229, 229, 0.7);
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
-.game-buttons button:hover {
-  background-color: #3700b3;
+.titulo-neon {
+  color: #00e5e5; /* Celeste */
+  text-shadow: 
+    0 0 5px rgba(0, 229, 229, 0.8), 
+    0 0 10px rgba(0, 229, 229, 1),
+    0 0 20px rgba(0, 229, 229, 1),
+    0 0 30px rgba(0, 229, 229, 1);
+  margin: 0;
+  font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
+}
+.game-buttons-row button img.button-icon {
+  width: 30px;
+  height: 30px;
 }
 
-/* Nuevo estilo para posicionar el chat en la parte inferior izquierda */
+.game-buttons-row button:hover {
+  background-color: rgba(0, 229, 229, 0.9);
+}
 app-chat {
   position: absolute;
-  bottom: 20px; /* Espacio desde la parte inferior */
-  left: 20px; /* Espacio desde la parte izquierda */
-  max-width: 300px; /* Ajusta el ancho del chat */
-  z-index: 100; /* Asegura que esté sobre otros elementos */
+  bottom: 250px;
+  left: 20px;
+  max-width: 300px;
+  z-index: 100;
 }

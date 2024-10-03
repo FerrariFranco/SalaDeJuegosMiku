@@ -1,47 +1,47 @@
 .chat-container {
   display: flex;
   flex-direction: column;
-  padding: 5px; /* Reducir el padding */
-  background-color: #000; /* Fondo negro */
-  height: 25vh; /* Reducir el alto del chat */
-  max-width: 400px; /* Ancho máximo más pequeño */
-  margin: 10px auto; /* Centrar el chat */
+  padding: 5px;
+  background-color: #000; 
+  height: 25vh; 
+  max-width: 400px; 
+  margin: 10px auto;
   overflow-y: auto;
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 10px;
 }
 
 .message-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px; /* Reducir el margen entre mensajes */
-  max-width: 60%; /* Reducir el ancho máximo de los mensajes */
-  color: aqua; /* Letra color aqua */
-  font-size: 12px; /* Tamaño de letra reducido */
-  word-wrap: break-word; /* Permitir que las palabras largas se corten y pasen al siguiente renglón */
-  word-break: break-word; /* Asegurar que las palabras se corten correctamente */
-  white-space: normal; /* Permitir que el texto ocupe múltiples líneas */
+  margin-bottom: 5px;
+  max-width: 60%;
+  color: aqua;
+  font-size: 12px; 
+  word-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal; 
 }
 
 .my-message {
-  align-self: flex-end; /* Alinear a la derecha */
-  background-color: #333; /* Fondo oscuro */
+  align-self: flex-end; 
+  background-color: #333; 
   text-align: right;
-  border-radius: 12px 12px 0 12px; /* Bordes más pequeños */
-  padding: 6px; /* Reducir padding */
+  border-radius: 12px 12px 0 12px; 
+  padding: 6px;
   color: aqua;
-  font-size: 12px; /* Tamaño de letra reducido */
+  font-size: 12px; 
   word-wrap: break-word;
   word-break: break-word;
   white-space: normal;
 }
 
 .other-message {
-  align-self: flex-start; /* Alinear a la izquierda */
+  align-self: flex-start; 
   background-color: #444;
-  border-radius: 12px 12px 12px 0; /* Bordes más pequeños */
-  padding: 6px; /* Reducir padding */
+  border-radius: 12px 12px 12px 0;
+  padding: 6px; 
   color: aqua;
-  font-size: 12px; /* Tamaño de letra reducido */
+  font-size: 12px; 
   word-wrap: break-word;
   word-break: break-word;
   white-space: normal;
@@ -49,29 +49,29 @@
 
 .new-message input {
   flex: 1;
-  padding: 6px; /* Reducir padding */
+  padding: 6px;
   border-radius: 8px;
   border: 1px solid #555;
   background-color: #222;
   color: aqua;
-  font-size: 12px; /* Tamaño de letra reducido */
+  font-size: 12px; 
 }
 
 .new-message button {
-  padding: 6px; /* Reducir padding */
+  padding: 6px; 
   border-radius: 8px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
-  margin-left: 5px; /* Reducir margen */
-  font-size: 12px; /* Tamaño de letra reducido */
+  margin-left: 5px; 
+  font-size: 12px; 
 }
 
 .avatar {
-  width: 40px; /* Reducir tamaño del avatar */
+  width: 40px; 
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 5px; /* Reducir el margen */
+  margin-right: 5px; 
 }

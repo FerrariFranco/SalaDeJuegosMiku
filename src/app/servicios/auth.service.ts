@@ -3,14 +3,16 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  private accessToken: string | null = null;
 
   constructor(
     private afAuth: AngularFireAuth,
-    private firestore: AngularFirestore
+    private firestore: AngularFirestore,
   ) {}
 
   // Método para registrar el usuario
@@ -37,20 +39,30 @@ export class AuthService {
   guardarUsuario(email: string, avatar: number) {
     return this.firestore.collection('usuarios').add({
       email,
-      avatar
+      avatar,
     });
   }
 
   // Método para verificar si el usuario ya existe en Firestore
   verificarUsuario(email: string) {
-    return this.firestore.collection('usuarios', ref => ref.where('email', '==', email)).get();
+    return this.firestore.collection('usuarios', ref =>
+      ref.where('email', '==', email)
+    ).get();
   }
 
   // Método para obtener los datos del usuario por email
   obtenerDatosUsuario(email: string): Observable<any> {
-    return this.firestore.collection('usuarios', ref => ref.where('email', '==', email)).valueChanges();
+    return this.firestore.collection('usuarios', ref =>
+      ref.where('email', '==', email)
+    ).valueChanges();
   }
+
+  // Método para cerrar sesión
   logout() {
+    this.accessToken = null; // Limpiar el token al hacer logout
     return this.afAuth.signOut();
   }
+
+  // Método para iniciar sesión en Spotify
+  
 }

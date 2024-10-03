@@ -1,48 +1,95 @@
 .sobre-mi-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    height: 100vh; /* Para que cubra toda la pantalla */
-    background-image: url('../../../assets/bg-quien.jpg'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    color: white; /* Asegúrate de que el texto sea visible sobre el fondo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  height: 150vh;
+  background-image: url('../../../assets/bg-quien.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Título de la página */
+.titulo-pagina {
+  font-size: 3rem;
+  color: #00e5e5;
+  text-shadow: 0 0 10px rgba(0, 229, 229, 0.8), 0 0 20px rgba(0, 229, 229, 1);
+  margin-bottom: 40px;
+}
+
+/* Nuevo contenedor para alinear los elementos horizontalmente */
+.contenido-principal {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos en fila */
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal de los datos personales y la imagen */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.datos-personales {
+  flex: 1; /* Permite que los datos ocupen más espacio */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen img {
+  width: auto; /* La imagen ocupará su tamaño natural */
+  height: 250px; /* Fija la altura */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 229, 229, 0.8);
+}
+
+.explicacion-juego {
+  max-width: 500px; /* Limita el ancho máximo */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.neon-text {
+  font-size: 2.5rem;
+  color: #00e5e5;
+  text-shadow: 0 0 10px rgba(0, 229, 229, 0.8), 0 0 20px rgba(0, 229, 229, 1);
+  font-family: 'Digital', sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenido-principal {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
   }
-  
+
   .info-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 30px;
+    flex-direction: column; /* Alinea verticalmente en pantallas pequeñas */
   }
   
-  .datos-personales {
-    flex: 1;
-    padding: 10px;
+  .explicacion-juego, .datos-personales {
+    width: 100%;
   }
-  
-  .imagen img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-  }
-  
-  .explicacion-juego {
-    max-width: 600px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  h3 {
-    margin-top: 20px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-  }
-  
+}

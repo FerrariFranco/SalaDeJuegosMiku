@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- Importa FormsModule
+import { FormsModule } from '@angular/forms'; 
 import { AuthService } from '../../servicios/auth.service';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ interface Message {
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [FormsModule, NgFor, NgClass, NgIf], // <-- Añade FormsModule aquí
+  imports: [FormsModule, NgFor, NgClass, NgIf],
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
@@ -22,18 +22,17 @@ export class ChatComponent implements OnInit {
   newMessage: string = '';
   messages: Message[] = [];
   userEmail: string | null = null;
-  userAvatar: number = 1; // Variable para almacenar el avatar del usuario
+  userAvatar: number = 1; 
 
   constructor(private authService: AuthService, private firestore: Firestore) {}
 
   ngOnInit() {
-    // Obtener el email del usuario autenticado
     this.authService.getUsuarioActual().subscribe(user => {
       if (user) {
         this.userEmail = user.email;
-        // Cargar avatar del usuario desde Firestore
+        
         this.loadUserAvatar();
-        // Cargar mensajes desde Firestore
+        
         this.loadMessages();
       }
     });
@@ -43,9 +42,9 @@ export class ChatComponent implements OnInit {
     if (this.userEmail) {
       this.authService.obtenerDatosUsuario(this.userEmail).subscribe(userData => {
         if (userData && userData.length > 0) {
-          this.userAvatar = userData[0].avatar; // Almacena el avatar del usuario
+          this.userAvatar = userData[0].avatar;
         } else {
-          this.userAvatar = 1; // Valor por defecto si no se encuentra el avatar
+          this.userAvatar = 1; 
         }
       });
     }
@@ -63,7 +62,7 @@ export class ChatComponent implements OnInit {
       const message = {
         email: this.userEmail!,
         text: this.newMessage,
-        avatar: this.userAvatar // Usa el avatar almacenado del usuario
+        avatar: this.userAvatar 
       };
       const messagesCollection = collection(this.firestore, 'messages');
       addDoc(messagesCollection, message).then(() => {
@@ -72,7 +71,7 @@ export class ChatComponent implements OnInit {
     }
   }
 
-  getAvatarURL() {
-    return `/assets/profiles/${this.userAvatar}.png`;
+  getAvatarURL(avatar: number) {
+    return `/assets/profiles/${avatar}.png`;
   }
 }
