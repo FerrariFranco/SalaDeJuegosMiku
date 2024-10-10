@@ -1,0 +1,54 @@
+body {
+    background-image: url('../../../assets/bg-encuesta.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    margin: 0;
+  }
+  
+  .encuesta-container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos dentro del grupo */
+  }
+  
+  label {
+    margin-bottom: 5px;
+    width: 100%; /* Asegura que el label ocupe todo el ancho */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .form-control {
+    width: 100%;
+    max-width: 400px; /* Establece un ancho máximo para centrar */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 100%;
+    max-width: 400px; /* Establece un ancho máximo para centrar */
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto; /* Esto centra el botón horizontalmente */
+    display: block; /* Necesario para que el margen automático funcione */
+  }
+  
+  
+  

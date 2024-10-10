@@ -1,0 +1,25 @@
+<div class="score-background">
+  <div class="score-container">
+    <h2>Top Scores por Juego</h2>
+    <div *ngFor="let juego of juegos">
+      <h3>{{ juego }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Puntaje</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let score of scores[juego]">
+            <td>{{ score.usuario }}</td>
+            <td>{{ score.puntaje }}</td>
+            <td>{{ score.fecha }}</td> <!-- Asegúrate de que 'fecha' existe en tus datos -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button (click)="goHome()">Volver al Home</button>
+  </div>
+</div>

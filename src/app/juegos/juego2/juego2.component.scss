@@ -1,67 +1,83 @@
 .juego-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/assets/bg-mayormenor.png');
-    color: white;
-    height: 100vh;
-  }
-  
-  .mazo {
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    margin-bottom: 20px;
-  }
-  
-  .carta {
-    width: 80px;
-    height: 120px;
-    background-color: #fff;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border-radius: 10px;
-  }
-  
-  .botones {
-    margin-bottom: 20px;
-  }
-  
-  button {
-    padding: 10px;
-    margin: 0 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4c74af; /* Color verde oscuro */
-    border: none;
-    border-radius: 5px;
-    color: white;
-  }
-  
-  .resultado {
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  h3 {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  button.home {
-    margin-top: 20px;
-    background-color: #3347ff; /* Color de botón de home */
-    color: white;
-    font-size: 16px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/bg-mayormenor.png');
+  color: white;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.mazo {
+  display: flex;
+  justify-content: center; /* Centrar las cartas */
+  width: 100%; /* Usar todo el ancho disponible */
+  margin-bottom: 20px;
+  padding: 0 20px; /* Padding lateral para mejorar la apariencia */
+}
+
+.carta {
+  width: 80px;
+  height: 120px;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 10px;
+  margin: 0 5px; /* Añadir margen lateral entre las cartas */
+}
+
+.botones {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00ffff; /* Color celeste neón */
+  border: none;
+  border-radius: 5px;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00e6e6;
+}
+
+.resultado {
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  color: #00ffff; /* Texto celeste neón */
+}
+
+.corazones {
+  color: red;
+  font-size: 24px;
+}
+
+h3 {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #00ffff; /* Texto celeste neón */
+}
+
+button.home {
+  margin-top: 20px;
+  background-color: #3347ff; /* Color del botón home */
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}

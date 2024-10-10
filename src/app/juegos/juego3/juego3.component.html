@@ -1,15 +1,16 @@
 <div class="game-container">
   <h2>¿Qué película es?</h2>
-  <img [src]="posterUrl" alt="Póster de la película" class="movie-poster">
+  <img [src]="posterUrl" alt="Movie Poster" class="movie-poster" />
 
   <div class="options">
     <button *ngFor="let movie of selectedMovies" (click)="checkAnswer(movie)">
       {{ movie }}
     </button>
   </div>
-  
-  <app-alert #alertComponent></app-alert>
-  <div class="score">
-    <h3>Puntuación: {{ score }}</h3>
+
+  <div class="resultado">
+    <p>Tiempo restante: <span class="neon-timer">{{ timeLeft }}s</span></p>
+    <p>Puntaje: {{ score }}</p>
   </div>
+  <app-alert #alertComponent></app-alert>
 </div>

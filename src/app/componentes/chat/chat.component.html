@@ -1,4 +1,4 @@
-<div class="chat-container">
+<div class="chat-container" #chatContainer>
   <div *ngFor="let message of messages" class="message-container" 
        [ngClass]="{'my-message': message.email === userEmail, 'other-message': message.email !== userEmail}">
     
@@ -9,6 +9,7 @@
 
     <div class="message-body">
       <p>{{ message.text }}</p>
+      <span class="timestamp">{{ formatTimestamp(message.timestamp) }}</span>
     </div>
   </div>
 </div>

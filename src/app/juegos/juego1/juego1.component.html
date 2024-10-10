@@ -1,4 +1,3 @@
-
 <!-- Div que cambia el fondo según los fallos -->
 <div class="fail-indicator" [style.background-image]="getFailBackground()">
   Fallos: {{ failCount }}
@@ -10,6 +9,12 @@
     {{ letter }}
   </span>
 </div>
+
+<!-- Mostrar los puntos -->
+<div class="points">
+  Puntos: {{ points }}
+</div>
+
 <app-alert></app-alert>
 
 <!-- Teclado para seleccionar letras -->
@@ -39,4 +44,5 @@
     </button>
   </div>
 </div>
+
 <button (click)="goHome()" class="home-button">Volver al Home</button>

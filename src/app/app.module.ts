@@ -16,6 +16,9 @@ import { AuthService } from './servicios/auth.service'; // Ajusta la ruta según
 import { LoadingSpinnerComponent } from './componentes/loading-spinner/loading-spinner.component'; // Ajusta la ruta según tu estructura
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { ScoresComponent } from './componentes/scores/scores.component';
+import { EncuestaComponent } from './componentes/encuesta/encuesta.component';
+
 
 
 
@@ -23,6 +26,8 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
   declarations: [
     AppComponent,
     LoadingSpinnerComponent,
+    ScoresComponent,
+    EncuestaComponent
   ],
   imports: [
     BrowserModule,

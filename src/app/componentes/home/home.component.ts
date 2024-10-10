@@ -62,7 +62,18 @@ export class HomeComponent implements OnInit {
       this.loadingService.hide();
     });
   }
-
+  goToScores() {
+    this.loadingService.show();
+    this.router.navigate(['/scores']).then(() => {
+      this.loadingService.hide();
+    });
+  }
+  goToEncuesta() {
+    this.loadingService.show();
+    this.router.navigate(['/encuesta']).then(() => {
+      this.loadingService.hide();
+    });
+  }
   goToQuien() {
     this.loadingService.show();
     this.router.navigate(['/quien-soy']).then(() => {

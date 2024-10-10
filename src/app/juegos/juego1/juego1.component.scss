@@ -59,3 +59,44 @@
   button:disabled {
     background-color: grey; /* Cambia el color de las letras usadas */
   }
+  .points {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00f2ff; /* Celeste brillante */
+    text-shadow: 
+      0 0 5px #00f2ff, 
+      0 0 10px #00f2ff, 
+      0 0 20px #00f2ff, 
+      0 0 30px #00e5ff, 
+      0 0 40px #00e0ff, 
+      0 0 50px #00d8ff;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .points::after {
+    content: ' ✨';
+    animation: shine 1.5s infinite alternate;
+  }
+  
+  @keyframes shine {
+    from {
+      text-shadow: 
+        0 0 5px #00f2ff, 
+        0 0 10px #00f2ff, 
+        0 0 20px #00f2ff, 
+        0 0 30px #00e5ff, 
+        0 0 40px #00e0ff, 
+        0 0 50px #00d8ff;
+    }
+    to {
+      text-shadow: 
+        0 0 10px #00f2ff, 
+        0 0 20px #00f2ff, 
+        0 0 30px #00f2ff, 
+        0 0 40px #00e5ff, 
+        0 0 50px #00e0ff, 
+        0 0 60px #00d8ff;
+    }
+  }

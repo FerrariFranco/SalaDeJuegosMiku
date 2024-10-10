@@ -50,4 +50,38 @@
       }
     }
   }
+
+  .resultado {
+    margin-top: 20px;
+    font-size: 1.5em;
+
+    p {
+      margin: 10px 0;
+    }
+
+    .neon-timer {
+      color: #FFFFFF; /* Color blanco neón */
+      text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF; /* Efecto de neón blanco */
+    }
+  }
+
+  .home {
+    margin-top: 20px;
+    background-color: #28a745; /* Color verde */
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #218838; /* Verde más oscuro al pasar el ratón */
+    }
+
+    &:active {
+      background-color: #1e7e34; /* Verde más oscuro al hacer click */
+    }
+  }
 }
